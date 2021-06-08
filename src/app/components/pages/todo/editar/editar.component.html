@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<div class="contaienr">
+    <div class="content">
+        <form class="form">
+            <p>Editar tarefa {{todo.id}}</p>
+            <mat-form-field >
+              <mat-label>Nome</mat-label>
+              <input
+              matInput 
+              name="nome"
+              [(ngModel)]="todo.nome"
+              >
+            </mat-form-field>
+
+            <mat-form-field >
+                <mat-label>Descrição</mat-label>
+                <input 
+                matInput 
+                name="descricao"
+                [(ngModel)]="todo.descricao"
+                >
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Status</mat-label>
+                <mat-select [(value)]="todo.status">
+                    <mat-option value="0">FINALIZADO</mat-option>
+                    <mat-option value="1">ABERTO</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+              <mat-form-field >
+                <mat-label>Data para Finalizar</mat-label>
+                <input
+                matInput 
+                name="dataFinalizar"
+                [(ngModel)]="todo.dataFinalizar"
+                >
+              </mat-form-field>
+
+              <div class="botoes">
+                <button mat-raised-button class="btn-salvar" (click)="editar()">Salvar</button>
+                <button mat-raised-button class="btn-cancelar" (click)="cancelar()">Cancelar</button>
+              </div>
+
+              
+          </form>
+    </div>
+</div>
+
+<app-footer></app-footer>

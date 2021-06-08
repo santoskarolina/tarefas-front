@@ -1,0 +1,69 @@
+.lista-container{
+    width:100%;
+    justify-content: center;
+    display: flex;
+
+    margin-top: 10px;
+}
+
+.listar-content{
+    width: 70%;
+    height: 100%;
+}
+
+.botao{
+    margin: 20px 0px;
+}
+.listar-content button{
+    margin: 0px 6px;
+}
+.btn-delete{
+    background-color: red;;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+
+    margin: 10px 0px;
+}
+
+.div2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.btns{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btns a{
+    text-emphasis: none;
+    color: #fff;
+}
+
+.btn-final{
+    background-color: #457b9d;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+}
+
+.btn-open{
+    background-color: #04878b;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+}
+
+.btn-novo{
+    background-color: #fca311;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+}

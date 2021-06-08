@@ -1,0 +1,19 @@
+.header{
+    background-color: #ffc727;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.header a{
+    text-decoration: none;
+    color: #000;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+}
+
+.header img{
+    width: 50px;
+    margin: 0px 10px;
+}

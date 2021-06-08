@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="contaienr">
+    <div class="content">
+        <form class="form">
+            <p>Nova tarefa</p>
+            <mat-form-field >
+              <mat-label>Nome</mat-label>
+              <input matInput 
+              name="nome" 
+                [(ngModel)]="todo.nome"
+              placeholder="Ex. Estudar java">
+            </mat-form-field>
+
+            <mat-form-field >
+                <mat-label>Descrição</mat-label>
+                <input matInput 
+                name="descricao" 
+                [(ngModel)]="todo.descricao"
+                placeholder="Ex. Estudar java para o simulado">
+              </mat-form-field>
+
+              <mat-form-field >
+                <mat-label>Data para Finalizar</mat-label>
+                <input matInput 
+                name="dataFinalizar" 
+                [(ngModel)]="todo.dataFinalizar"
+                placeholder="22/07/2000">
+              </mat-form-field>
+
+              <div class="botoes">
+                <button mat-raised-button class="btn-salvar" (click)="salvar()">Salvar</button>
+                <button mat-raised-button class="btn-cancelar" (click)="cancelar()">Cancelar</button>
+              </div>
+
+              
+          </form>
+    </div>
+</div>
+
+<app-footer></app-footer>
