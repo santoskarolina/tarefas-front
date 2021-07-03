@@ -4,5 +4,5 @@
 - frontend feito com angular, usando o Angular Material
 - deploy da api no Heroku
 - backend feito em Java com SpringBoot:
-https://github.com/anna104016/tarefas
+https://github.com/santoskarolina/tarefas
 
