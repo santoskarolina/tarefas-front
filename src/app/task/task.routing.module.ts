@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {ListarComponent} from "./listar/listar.component";
 import {FinalizadosComponent} from "./finalizados/finalizados.component";
+import {TasksFindComponent} from "./tasks-find/tasks-find.component";
 
-const routes: Routes = [
-    { path: '', component: ListarComponent },
-    { path: 'close',  component: FinalizadosComponent }
+const routes: Routes =  [
+    { path: '', component: TasksFindComponent },
+    { path: 'close',  component: FinalizadosComponent}
 ];
 
 @NgModule({

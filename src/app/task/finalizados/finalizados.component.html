@@ -1,19 +1,6 @@
 
 <div class="lista-container">
     <div class="listar-content">
-        <div class="botao">
-            <a routerLink="/novo-todo">
-                <button mat-raised-button class="btn-novo">Nova tarefa</button>
-            </a>
-
-            <a routerLink="/tasks/close">
-                <button mat-raised-button class="btn-final">Finalizados</button>
-            </a>
-
-            <a routerLink="/tasks">
-                <button mat-raised-button class="btn-open">Abertos</button>
-            </a>
-        </div>
 
         <mat-card class="card" *ngFor="let task of taskCompleted">
             <div class="div">
@@ -25,19 +12,12 @@
 
             <div class="div2">
                 <div class="btns">
-                    <button mat-mini-fab >
-                        <a routerLink="/editar-tarefa/{{task.task_id}}">
-                            <mat-icon>edit</mat-icon>
-                        </a>
-                    </button>
-
-                     <button mat-mini-fab class="btn-delete">
-                         <a routerLink="/editar-tarefa/{{task.task_id}}">
-                            <mat-icon>delete</mat-icon>
-                        </a>
+                    <button mat-mini-fab matTooltip="Excluir tarefa" (click)="deletar(task.task_id)">
+                        <mat-icon>delete</mat-icon>
                     </button>
                 </div>
             </div>
         </mat-card>
     </div>
 </div>
+

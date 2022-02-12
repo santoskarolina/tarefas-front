@@ -15,12 +15,12 @@ export class TodoService {
   constructor(private http: HttpClient, private snack: MatSnackBar) { }
 
   tasksOpen(): Observable<TaskModel[]> {
-    const url = `${this.baseUrl}/task/openn`;
+    const url = `${this.baseUrl}/task/open`;
     return this.http.get<TaskModel[]>(url);
   }
 
   tasksClose(): Observable<TaskModel[]> {
-    const url = `${this.baseUrl}/todo/close`;
+    const url = `${this.baseUrl}/task/close`;
     return this.http.get<TaskModel[]>(url);
   }
 
@@ -37,6 +37,11 @@ export class TodoService {
   findOne(id: string): Observable<TaskModel> {
     const url = `${this.baseUrl}/task/${id}`;
     return this.http.get<TaskModel>(url);
+  }
+
+  fineshed(id:string, task: TaskModel): Observable<void>{
+    const url = `${this.baseUrl}/task/finish/${id}`;
+    return this.http.put<void>(url, task) ;
   }
 
   mensagem(string: String): void{

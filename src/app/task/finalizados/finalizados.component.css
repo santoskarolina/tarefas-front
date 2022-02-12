@@ -2,7 +2,6 @@
     width:100%;
     justify-content: center;
     display: flex;
-
     margin-top: 10px;
 }
 
@@ -14,11 +13,13 @@
 .botao{
     margin: 20px 0px;
 }
+
 .listar-content button{
     margin: 0px 6px;
 }
 .btn-delete{
-    background-color: red;;
+    background-color: darkred;
+    color: #FFFFFF;
 }
 
 .card{
@@ -46,24 +47,12 @@
     text-emphasis: none;
     color: #fff;
 }
-
-.btn-final{
+.btn-finalizados{
     background-color: #457b9d;
     color: #fff;
-    width: 100px;
-    text-align: center;
-}
-
-.btn-open{
-    background-color: #04878b;
-    color: #fff;
-    width: 100px;
-    text-align: center;
 }
 
 .btn-novo{
     background-color: #fca311;
     color: #fff;
-    width: 100px;
-    text-align: center;
 }

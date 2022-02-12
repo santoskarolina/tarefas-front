@@ -35,9 +35,20 @@ export class ListarComponent implements OnInit {
   deletar(id:string): void {
     this.service.delete(id).subscribe(
         response => {
+          this.service.mensagem(`Tarefa excluida com sucesso!`);
+          this.ngOnInit()
+        }, error => {
+          this.service.mensagem(`Falha ao excluir tarefa.`);
+        })
+  }
+
+  concluir(id:string, task: any):void {
+    this.service.fineshed(id, task).subscribe(
+        response => {
           this.service.mensagem(`Tarefa concluída com sucesso!`);
           this.ngOnInit()
         }, error => {
+            console.log(error)
           this.service.mensagem(`Falha ao concluir tarefa.`);
         })
   }

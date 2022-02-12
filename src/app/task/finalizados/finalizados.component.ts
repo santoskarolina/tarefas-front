@@ -26,4 +26,14 @@ export class FinalizadosComponent implements OnInit {
     )
   }
 
+  deletar(id:string): void {
+    this.service.delete(id).subscribe(
+        response => {
+          this.service.mensagem(`Tarefa excluida com sucesso!`);
+          this.ngOnInit()
+        }, error => {
+          this.service.mensagem(`Falha ao excluir tarefa.`);
+        })
+  }
+
 }
