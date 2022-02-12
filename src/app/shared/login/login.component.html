@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="content">
+
+        <form class="form" [formGroup]="form">
+
+            <h1 class="title">Login</h1>
+            <h1 class="incorrect-email">{{user}}</h1>
+
+            <div class="form-field">
+                <label class="label">Email</label>
+                <input
+                        required
+                        formControlName="email"
+                       placeholder="user@email.com">
+            </div>
+
+            <div class="form-field">
+                <label class="label">Password</label>
+                <input
+                        required
+                        formControlName="password"
+                        placeholder="*********"
+                       type="password">
+            </div>
+
+            <div class="actions">
+                <button mat-button (click)="login()" [disabled]="!form.valid">Login</button>
+                <span (click)="newAccount()">Create account</span>
+            </div>
+
+        </form>
+    </div>
+
+</div>

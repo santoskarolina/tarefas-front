@@ -1,0 +1,48 @@
+.contaienr{
+    height: 80%;
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+}
+
+.form{
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form input{
+    font-size: 20px;
+}
+
+.form p{
+    font-size:20px;
+    font-weight:500;
+}
+.botoes{
+    display: flex;
+}
+
+.botoes button{
+    padding: 0px 10px;
+
+    width: 100px;
+    margin: 0px 10px;
+}
+
+.btn-salvar{
+    background-color: #fca311;
+    color: #fff;
+}
+
+.btn-cancelar{
+    background-color:#ef233c;
+    color: #fff;
+}
