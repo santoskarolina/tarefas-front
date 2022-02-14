@@ -15,4 +15,9 @@ export class UserService {
       private http: HttpClient
   ) { }
 
+  myInformations(): Observable<UserModel> {
+    const url = `${this.baseURl}/user/infos`
+    return this.http.get<UserModel>(url)
+  }
+
 }

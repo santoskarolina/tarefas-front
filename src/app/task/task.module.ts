@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {FinalizadosComponent} from "./finalizados/finalizados.component";
-import {ListarComponent} from "./listar/listar.component";
-import {NovoComponent} from "./novo/novo.component";
+import {My_tasks_completedComponent} from "./my_tasks_completed/my_tasks_completed.component";
+import {My_tasksComponent} from "./my-tasks/my_tasks.component";
+import {New_taskComponent} from "./new_task/new_task.component";
 import {TaskRoutingModule} from "./task.routing.module";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
@@ -22,9 +22,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
-      FinalizadosComponent,
-      ListarComponent,
-      NovoComponent,
+      My_tasks_completedComponent,
+      My_tasksComponent,
+      New_taskComponent,
     TasksFindComponent
   ],
   imports: [
@@ -45,9 +45,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatTabsModule
   ],
   exports: [
-    FinalizadosComponent,
-    ListarComponent,
-    NovoComponent,
+    My_tasks_completedComponent,
+    My_tasksComponent,
+    New_taskComponent,
     TasksFindComponent
   ],
     providers: [

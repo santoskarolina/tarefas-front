@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-tasks-find',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksFindComponent implements OnInit {
 
+  @ViewChild('tasksfineshed') tasksfineshed: any
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public updateTasksFineshed(): void{
+    this.tasksfineshed.tasksClose()
+  }
 }

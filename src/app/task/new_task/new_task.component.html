@@ -1,0 +1,33 @@
+<div class="container">
+
+        <form class="form" [formGroup]="form">
+            <p>New task</p>
+            <mat-form-field >
+              <mat-label>Name</mat-label>
+              <input
+                      autocomplete="off"
+                      matInput
+                      placeholder="Study java"
+                      formControlName="name"
+              >
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <input matInput
+                       autocomplete="off"
+                        name="descricao"
+                       matInput
+                       placeholder="Study java with spring boot"
+                       formControlName="description"
+                >
+              </mat-form-field>
+
+              <div class="actions">
+                <button mat-raised-button class="btn-save" (click)="createTask()">Save</button>
+                <button mat-raised-button class="btn-cancel" (click)="cancel()">Cancel</button>
+              </div>
+
+          </form>
+    </div>
+

@@ -3,11 +3,11 @@ import {TaskModel} from '../model/todo.model';
 import { TodoService } from '../todo.service';
 
 @Component({
-  selector: 'app-finalizados',
-  templateUrl: './finalizados.component.html',
-  styleUrls: ['./finalizados.component.css']
+  selector: 'app-my_tasks_completed',
+  templateUrl: './my_tasks_completed.component.html',
+  styleUrls: ['./my_tasks_completed.component.css']
 })
-export class FinalizadosComponent implements OnInit {
+export class My_tasks_completedComponent implements OnInit {
 
   taskCompleted: TaskModel[] = [];
 
@@ -17,22 +17,21 @@ export class FinalizadosComponent implements OnInit {
     this.tasksClose();
   }
 
-  tasksClose(): void {
+  public tasksClose(): void {
     this.service.tasksClose().subscribe(
       response => {
         this.taskCompleted = response
       }
-
     )
   }
 
-  deletar(id:string): void {
+  delete(id:string): void {
     this.service.delete(id).subscribe(
         response => {
-          this.service.mensagem(`Tarefa excluida com sucesso!`);
+            this.service.message(`Task deleted successfully!`);
           this.ngOnInit()
         }, error => {
-          this.service.mensagem(`Falha ao excluir tarefa.`);
+            this.service.message(`Failed to delete task.`);
         })
   }
 

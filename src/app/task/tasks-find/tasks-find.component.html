@@ -1,11 +1,15 @@
 <app-header></app-header>
+
     <mat-tab-group animationDuration="0ms" class="tab-group" mat-align-tabs="center">
-        <mat-tab label="Abertas">
-            <app-listar></app-listar>
+
+        <mat-tab label="Open">
+            <app-my-tasks (updateTasksFineshed)="updateTasksFineshed()"></app-my-tasks>
         </mat-tab>
-        <mat-tab label="Finalizadas">
-            <app-finalizados></app-finalizados>
+
+        <mat-tab label="Completed">
+            <app-my_tasks_completed #tasksfineshed></app-my_tasks_completed>
         </mat-tab>
+
     </mat-tab-group>
 
 <app-footer></app-footer>

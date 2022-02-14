@@ -44,7 +44,7 @@ export class TodoService {
     return this.http.put<void>(url, task) ;
   }
 
-  mensagem(string: String): void{
+  message(string: String): void{
     this.snack.open(`${string}`, 'OK',
     {
       horizontalPosition: 'end',

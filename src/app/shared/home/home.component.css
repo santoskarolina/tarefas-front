@@ -1,6 +1,5 @@
 .container{
     width:100%;
-
     align-items: center;
     justify-content: center;
     min-height: 100%;
@@ -50,9 +49,9 @@ mat-icon{
 }
 .text button{
     width:200px;
-    background-color: #ffc727;
+    background-color: #F08080;
     padding: 0px 20px;
-    color: #000;
+    color: #FFFFFF;
 
     font-weight: 500;
     font-size: 16px;

@@ -6,11 +6,11 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {MatDialogRef} from "@angular/material/dialog";
 
 @Component({
-  selector: 'app-novo',
-  templateUrl: './novo.component.html',
-  styleUrls: ['./novo.component.css']
+  selector: 'app-new_task',
+  templateUrl: './new_task.component.html',
+  styleUrls: ['./new_task.component.css']
 })
-export class NovoComponent implements OnInit {
+export class New_taskComponent implements OnInit {
 
   form: FormGroup
 
@@ -18,14 +18,14 @@ export class NovoComponent implements OnInit {
       private service: TodoService,
       private router: Router,
       private formGroup: FormBuilder,
-      private dialoref: MatDialogRef<NovoComponent>
+      private dialoref: MatDialogRef<New_taskComponent>
   ) { }
 
   ngOnInit(): void {
     this.createForm(new TaskModel())
   }
 
-  cancelar(){
+  cancel(){
    this.dialoref.close()
   }
 
@@ -40,13 +40,13 @@ export class NovoComponent implements OnInit {
     })
   }
 
-  salvar(){
+  createTask(){
     this.service.newTodo(this.form.value).subscribe(
       response => {
-        this.service.mensagem("Tarefa adicionada com sucesso!")
+        this.service.message("Task added successfully!")
         this.dialoref.close()
-      }, err => {
-        this.service.mensagem("Data incorreta(dd/mm/yyyy)")
+      }, () => {
+        this.service.message("Failed to add task")
       }
     )
   }
