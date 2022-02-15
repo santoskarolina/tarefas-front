@@ -67,11 +67,15 @@ export class LoginComponent implements OnInit {
 
   createAccount(){
     this.sharedService.createAccount(this.form.value).subscribe(response => {
-      this.sharedService.message('User created successfully!')
       this.form.reset()
+      this.sharedService.message('User created successfully!')
       this.new_account = false
     }, error => {
-      this.sharedService.message('Failed to register user')
+      if(error.error.error === 'email'){
+        this.sharedService.message('Email already registered')
+      }else{
+        this.sharedService.message('Failed to register user')
+      }
     })
   }
 
